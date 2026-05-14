@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitSpark</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.min.css" />
+
+  <style>
+    /* ── ADDED: smooth scroll ── */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .logo-container img {
+      height: 100px;
+      width: 300px;
+    }
+
+    .top-nav {
+      background-color: #333;
+      padding: 10px 0;
+    }
+
+    .top-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .top-nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .top-nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .carousel-inner {
+      margin: 30px auto;
+    }
+
+    .carousel-item img{
+      height: 650px;
+      object-fit: cover;
+    }
+
+    .carousel-caption{
+      background: rgba(0,0,0,0.45);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .carousel-item{
+      transition: transform 1s ease-in-out;
+    }
+
+    /* ── ADDED: About section ── */
+    #about {
+      background: #f8f9fa;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    #about h2 {
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      max-width: 720px;
+      margin: 0 auto 40px;
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .about-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .stat-box {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 25px 35px;
+      min-width: 150px;
+    }
+
+    .stat-box h3 {
+      font-size: 2rem;
+      color: #e67e22;
+      margin: 0 0 5px;
+    }
+
+    .stat-box span {
+      font-size: 0.95rem;
+      color: #777;
+    }
+
+    /* ── ADDED: Contact section ── */
+    #contact {
+      background: #2c3e50;
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    #contact p.subtitle {
+      color: #bdc3c7;
+      margin-bottom: 35px;
+      font-size: 1rem;
+    }
+
+    .contact-form {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 13px 16px;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+    }
+
+    .contact-form button {
+      background: #e67e22;
+      color: white;
+      border: none;
+      padding: 13px 45px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .contact-form button:hover {
+      background: #d35400;
+    }
+
+    /* ── ADDED: Footer ── */
+    footer {
+      background: #1a252f;
+      color: #aaa;
+      text-align: center;
+      padding: 18px;
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: #e67e22;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="./images/1.png" alt="FitSpark Logo" />
+  </div>
+
+  <!-- Top Nav — MODIFIED: added anchor hrefs -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Bootstrap Navbar — unchanged -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary mt-2" style="margin-right: 130px;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">🏋 FitSpark</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Yoga & Meditation
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./exerciseyoga.html">Exercises</a></li>
+              <li><a class="dropdown-item" href="./dietyoga.html">Diet</a></li>
+              <li><a class="dropdown-item" href="./benefitsyoga.html">Benefits</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Zumba
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./zumbaexercises.html">Exercises</a></li>
+              <li><a class="dropdown-item" href="./dietzumba.html">Diet</a></li>
+              <li><a class="dropdown-item" href="./benzumba.html">Benefits</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Weight Training
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./weightexercises.html">Exercises</a></li>
+              <li><a class="dropdown-item" href="./dietweight.html">Diet</a></li>
+              <li><a class="dropdown-item" href="./benweight.html">Benefits</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel — MODIFIED: added id="home" wrapper -->
+  <div id="home">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="https://static.vecteezy.com/system/resources/previews/002/440/664/large_2x/group-practicing-yoga-in-the-gym-concept-of-healthy-exercise-and-meditation-free-photo.jpg" alt="FitSpark">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>FitSpark</h3>
+            <p>Fitness. Focus. FitSpark.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1800&auto=format&fit=crop" alt="Yoga">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1600&auto=format&fit=crop" alt="Zumba">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1800&auto=format&fit=crop" alt="Weight Training">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── ADDED: About Section ── -->
+  <section id="about">
+    <h2>About FitSpark</h2>
+    <p>
+      FitSpark is your one-stop fitness destination. Whether you're into the calm of Yoga &amp; Meditation,
+      the energy of Zumba, or the power of Weight Training — we've got something for everyone.
+      Our goal is to make fitness accessible, fun, and effective for all levels.
+    </p>
+    <div class="about-stats">
+      <div class="stat-box">
+        <h3>3+</h3>
+        <span>Fitness Programs</span>
+      </div>
+      <div class="stat-box">
+        <h3>100+</h3>
+        <span>Exercises Listed</span>
+      </div>
+      <div class="stat-box">
+        <h3>Diet</h3>
+        <span>Plans Included</span>
+      </div>
+      <div class="stat-box">
+        <h3>Free</h3>
+        <span>Always</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards Section — MODIFIED: added id="services" -->
+  <div id="services" class="container my-5">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://www.tpoftampa.com/wp-content/uploads/2022/08/meditation-meaning-turning-point-tampa.jpg" class="card-img-top" alt="Yoga">
+          <div class="card-body">
+            <h5 class="card-title">Yoga & Meditation</h5>
+            <p class="card-text">Explore calming yoga poses and mindful meditation techniques to improve flexibility and reduce stress.</p>
+            <a href="./exerciseyoga.html" class="btn btn-primary">Explore Yoga</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://www.verywellfit.com/thmb/SaUyT2h2ujEDx4zCAU0ilFclWqI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4688722-GettyImages-950806258-06e1e050ab184f3694fd96017c9a42ee.jpg" class="card-img-top" alt="Zumba">
+          <div class="card-body">
+            <h5 class="card-title">Zumba</h5>
+            <p class="card-text">Dance your way to fitness with high-energy Zumba workouts that make burning calories fun and exciting.</p>
+            <a href="./zumbaexercises.html" class="btn btn-success">Start Zumba</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="https://wallpapers.com/images/featured/weightlifting-ijas5ewqp8obygcg.jpg" class="card-img-top" alt="Weight Training">
+          <div class="card-body">
+            <h5 class="card-title">Weight Training</h5>
+            <p class="card-text">Build strength and muscle with guided weight training plans suitable for beginners and pros alike.</p>
+            <a href="./weightexercises.html" class="btn btn-danger">Train Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ADDED: Contact Section ── -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p class="subtitle">We'd love to hear from you — reach out anytime!</p>
+    <div class="contact-form">
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="button">Send Message</button>
+    </div>
+  </section>
+
+  <!-- ── ADDED: Footer ── -->
+  <footer>
+    &copy; 2025 <span>FitSpark</span> | Fitness. Focus. FitSpark. 🔥
+  </footer>
+
+  <!-- Bootstrap JS — unchanged -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
